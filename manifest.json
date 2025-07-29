@@ -1,9 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Tab Title Fetcher",
+  "name": "LinkedIn Profile Extractor",
   "version": "1.0",
-  "description": "Shows the current tab's title in a beautiful popup.",
-  "permissions": ["activeTab"],
+  "description": "Extracts LinkedIn profile data and sends it to a backend.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -13,6 +18,12 @@
       "128": "icon128.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/in/*"],
+      "js": ["content.js"]
+    }
+  ],
   "icons": {
     "16": "icon16.png",
     "32": "icon32.png",

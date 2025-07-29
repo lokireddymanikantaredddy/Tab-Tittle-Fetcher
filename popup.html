@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tab Title Fetcher</title>
+  <title>LinkedIn Profile Extractor</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <div class="container">
-    <h1>Tab Title Fetcher</h1>
-    <button id="fetch-title">Get Tab Title</button>
-    <div id="title-display" class="title-display">Title will appear here</div>
+    <h2>LinkedIn Profile Extractor</h2>
+    <textarea 
+      id="links" 
+      class="url-input" 
+      placeholder="Enter LinkedIn profile URLs &#10;Example:&#10;https://www.linkedin.com/in/username1/&#10;https://www.linkedin.com/in/username2/&#10;https://www.linkedin.com/in/username3/"
+    ></textarea>
+    <button id="start" class="extract-btn">Start Extraction</button>
+    
+    <div id="status" class="status"></div>
+    
+    <div class="instructions">
+      Make sure you're logged into LinkedIn before starting extraction.
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
