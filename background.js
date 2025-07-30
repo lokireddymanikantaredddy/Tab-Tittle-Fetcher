@@ -1,4 +1,4 @@
-// background.js
+
 let profileLinks = [];
 let currentIndex = 0;
 

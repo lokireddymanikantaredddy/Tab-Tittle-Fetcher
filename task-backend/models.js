@@ -1,13 +1,13 @@
-// models.js
+
 const { Sequelize, DataTypes } = require('sequelize');
 
-// Initialize Sequelize with SQLite
+
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: 'database.sqlite', // This file will be created in your project root
 });
 
-// Define the Profile model
+
 const Profile = sequelize.define('Profile', {
   name: {
     type: DataTypes.STRING,

@@ -18,7 +18,6 @@ document.getElementById('start').addEventListener('click', async () => {
   }, (response) => {
     if (response && response.status === 'started') {
       console.log('Background script started processing profiles');
-      // Clear the textarea after starting
       document.getElementById('links').value = '';
   }
   });
